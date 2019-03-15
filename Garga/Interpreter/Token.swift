@@ -19,7 +19,7 @@ enum Token: Equatable {
     init?(keyword: String) {
         switch keyword {
         case "لو": self = .if
-        case "غيرىذي": self = .else
+        case "غىرىذى": self = .else
         case "طولما": self = .while
         case "داله": self = .func
         default:
