@@ -9,7 +9,7 @@
 enum Token: Equatable {
     case eof
     case equal, equalEqual, bang, bangEqual, greater, greaterEqual, less, lessEqual
-    case plus, minus, star, slash, dot
+    case plus, minus, star, slash, dot, comma
     case leftParen, rightParen, leftBrace, rightBrace
     case `if`, `else`, `while`, `func`
     case number(Int)

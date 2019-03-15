@@ -69,6 +69,7 @@ struct Scanner {
         case "*": return .star
         case "/": return .slash
         case ".": return .dot
+        case ",": return .comma
         case "(": return .leftParen
         case ")": return .rightParen
         case "{": return .leftBrace
