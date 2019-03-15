@@ -20,7 +20,7 @@ enum Token: Equatable {
         switch keyword {
         case "لو": self = .if
         case "غيرىذي": self = .else
-        case "دام": self = .while
+        case "طولما": self = .while
         case "داله": self = .func
         default:
             return nil
