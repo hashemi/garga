@@ -17,8 +17,7 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        sourceTextView.font = NSFont(name: "SF Mono", size: 16.0)
     }
 
     override var representedObject: Any? {
