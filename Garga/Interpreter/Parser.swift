@@ -38,12 +38,12 @@ struct Parser {
         return false
     }
     
-    mutating func parse() throws -> [Stmt] {
+    mutating func parse() throws -> Stmt {
         var stmts: [Stmt] = []
         while peek != .eof {
             stmts.append(try statement())
         }
-        return stmts
+        return .block(stmts)
     }
     
     private mutating func assignment() throws -> Expr {
