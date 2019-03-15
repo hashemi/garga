@@ -11,6 +11,9 @@
 		EECFE0D5223BA95A00FFDBCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECFE0D4223BA95A00FFDBCC /* ViewController.swift */; };
 		EECFE0D7223BA95B00FFDBCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECFE0D6223BA95B00FFDBCC /* Assets.xcassets */; };
 		EECFE0DA223BA95B00FFDBCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECFE0D8223BA95B00FFDBCC /* Main.storyboard */; };
+		EECFE0E5223BB10900FFDBCC /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECFE0E4223BB10900FFDBCC /* Scanner.swift */; };
+		EECFE0E7223BE27300FFDBCC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECFE0E6223BE27300FFDBCC /* Token.swift */; };
+		EECFE0E9223BE29700FFDBCC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECFE0E8223BE29700FFDBCC /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		EECFE0D9223BA95B00FFDBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EECFE0DB223BA95B00FFDBCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EECFE0DC223BA95B00FFDBCC /* Garga.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Garga.entitlements; sourceTree = "<group>"; };
+		EECFE0E4223BB10900FFDBCC /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		EECFE0E6223BE27300FFDBCC /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		EECFE0E8223BE29700FFDBCC /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		EECFE0D1223BA95A00FFDBCC /* Garga */ = {
 			isa = PBXGroup;
 			children = (
+				EECFE0E3223BB0F900FFDBCC /* Interpreter */,
 				EECFE0D2223BA95A00FFDBCC /* AppDelegate.swift */,
 				EECFE0D4223BA95A00FFDBCC /* ViewController.swift */,
 				EECFE0D6223BA95B00FFDBCC /* Assets.xcassets */,
@@ -61,6 +68,16 @@
 				EECFE0DC223BA95B00FFDBCC /* Garga.entitlements */,
 			);
 			path = Garga;
+			sourceTree = "<group>";
+		};
+		EECFE0E3223BB0F900FFDBCC /* Interpreter */ = {
+			isa = PBXGroup;
+			children = (
+				EECFE0E4223BB10900FFDBCC /* Scanner.swift */,
+				EECFE0E6223BE27300FFDBCC /* Token.swift */,
+				EECFE0E8223BE29700FFDBCC /* Error.swift */,
+			);
+			path = Interpreter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EECFE0D5223BA95A00FFDBCC /* ViewController.swift in Sources */,
+				EECFE0E5223BB10900FFDBCC /* Scanner.swift in Sources */,
 				EECFE0D3223BA95A00FFDBCC /* AppDelegate.swift in Sources */,
+				EECFE0E9223BE29700FFDBCC /* Error.swift in Sources */,
+				EECFE0E7223BE27300FFDBCC /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

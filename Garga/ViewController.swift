@@ -50,8 +50,19 @@ class ViewController: NSViewController {
             return
         }
         
+        var s = Scanner(source: source)
+        while true {
+            do {
+                let token = try s.nextToken()
+                print(token)
+                guard token != .eof else { break }
+            } catch {
+                print(error)
+                break
+            }
+        }
+
         synthesizer.startSpeaking(source)
     }
-
 }
 
