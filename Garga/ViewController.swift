@@ -57,8 +57,19 @@ class ViewController: NSViewController {
         } while tokens.last != .eof
 
         var p = Parser(tokens: tokens)
-        print(try! p.parse())
-
-        synthesizer.startSpeaking(source)
+        let prog = try! p.parse()
+        
+        var allWords = ""
+        let say = Value.native(["الكلام"], { variables in
+            if let words = variables["الكلام"]?.stringValue {
+                allWords = allWords + "\n" + words
+            }
+            return .true
+        })
+        
+        var i = Interpreter(variables: ["غول": say])
+        _ = try! i.eval(prog)
+        
+        synthesizer.startSpeaking(allWords)
     }
 }

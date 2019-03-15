@@ -10,4 +10,6 @@ enum GargaError: Error {
     case unknownCharacter(UnicodeScalar)
     case unterminatedString
     case unexpectedToken(Token)
+    case nonCallable
+    case unexpectedValue(Value)
 }
