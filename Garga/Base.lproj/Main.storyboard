@@ -752,7 +752,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="source" destination="vix-bf-UCx" id="XfT-9F-Agd"/>
                         <outlet property="sourceTextView" destination="LHM-1O-ak7" id="kxw-h9-0md"/>
                     </connections>
                 </viewController>
