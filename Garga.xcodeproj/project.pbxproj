@@ -14,6 +14,9 @@
 		EECFE0E5223BB10900FFDBCC /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECFE0E4223BB10900FFDBCC /* Scanner.swift */; };
 		EECFE0E7223BE27300FFDBCC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECFE0E6223BE27300FFDBCC /* Token.swift */; };
 		EECFE0E9223BE29700FFDBCC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECFE0E8223BE29700FFDBCC /* Error.swift */; };
+		EECFE0EB223BE30900FFDBCC /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECFE0EA223BE30900FFDBCC /* Parser.swift */; };
+		EECFE0ED223BFD5F00FFDBCC /* AST.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECFE0EC223BFD5F00FFDBCC /* AST.swift */; };
+		EECFE0EF223BFE5D00FFDBCC /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECFE0EE223BFE5D00FFDBCC /* Value.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		EECFE0E4223BB10900FFDBCC /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
 		EECFE0E6223BE27300FFDBCC /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		EECFE0E8223BE29700FFDBCC /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		EECFE0EA223BE30900FFDBCC /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		EECFE0EC223BFD5F00FFDBCC /* AST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AST.swift; sourceTree = "<group>"; };
+		EECFE0EE223BFE5D00FFDBCC /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,9 @@
 				EECFE0E4223BB10900FFDBCC /* Scanner.swift */,
 				EECFE0E6223BE27300FFDBCC /* Token.swift */,
 				EECFE0E8223BE29700FFDBCC /* Error.swift */,
+				EECFE0EA223BE30900FFDBCC /* Parser.swift */,
+				EECFE0EC223BFD5F00FFDBCC /* AST.swift */,
+				EECFE0EE223BFE5D00FFDBCC /* Value.swift */,
 			);
 			path = Interpreter;
 			sourceTree = "<group>";
@@ -151,7 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EECFE0D5223BA95A00FFDBCC /* ViewController.swift in Sources */,
+				EECFE0ED223BFD5F00FFDBCC /* AST.swift in Sources */,
 				EECFE0E5223BB10900FFDBCC /* Scanner.swift in Sources */,
+				EECFE0EF223BFE5D00FFDBCC /* Value.swift in Sources */,
+				EECFE0EB223BE30900FFDBCC /* Parser.swift in Sources */,
 				EECFE0D3223BA95A00FFDBCC /* AppDelegate.swift in Sources */,
 				EECFE0E9223BE29700FFDBCC /* Error.swift in Sources */,
 				EECFE0E7223BE27300FFDBCC /* Token.swift in Sources */,
