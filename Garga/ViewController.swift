@@ -9,6 +9,11 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    @IBOutlet var sourceTextView: NSTextView!
+
+    var source: String {
+        return sourceTextView.string
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +27,31 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func run(_ sender: Any) {
+        // find an Arabic voice
+        guard let voice =
+            (NSSpeechSynthesizer
+                .availableVoices
+                .filter { voice in
+                    let attr = NSSpeechSynthesizer.attributes(forVoice: voice)
+                    guard let locale = attr[NSSpeechSynthesizer.VoiceAttributeKey.localeIdentifier] as? String else {
+                        return false
+                    }
+                    
+                    return locale.starts(with: "ar")
+                }
+                .first)
+        else {
+            return
+        }
+        
+        // try to initialize the synthesizer with an arabic voice
+        guard let synthesizer = NSSpeechSynthesizer(voice: voice) else {
+            return
+        }
+        
+        synthesizer.startSpeaking(source)
+    }
 
 }
 
