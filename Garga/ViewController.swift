@@ -49,15 +49,6 @@ class ViewController: NSViewController {
             return
         }
         
-        var s = Scanner(source: source)
-        var tokens: [Token] = []
-        repeat {
-            tokens.append(try! s.nextToken())
-        } while tokens.last != .eof
-
-        var p = Parser(tokens: tokens)
-        let prog = try! p.parse()
-        
         var allWords = ""
         let say = Value.native(["الكلام"], { variables in
             if let words = variables["الكلام"]?.stringValue {
@@ -66,8 +57,21 @@ class ViewController: NSViewController {
             return .true
         })
         
-        var i = Interpreter(variables: ["غول": say])
-        _ = try! i.eval(prog)
+        do {
+            var i = Interpreter(variables: ["غول": say])
+            var s = Scanner(source: source)
+            var tokens: [Token] = []
+            repeat {
+                tokens.append(try s.nextToken())
+            } while tokens.last != .eof
+            var p = Parser(tokens: tokens)
+            let prog = try p.parse()
+            
+            _ = try i.eval(prog)
+        } catch {
+            allWords = "غلط"
+            print(error)
+        }
         
         synthesizer.startSpeaking(allWords)
     }
